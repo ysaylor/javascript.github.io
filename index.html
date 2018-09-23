@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Aliens-R-Real
+            <img class="nav-ufo" src="static/images/ufo-and-cow.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+      <p style= "color:whitesmoke;"><b>The extra-terrestrial menace has come to Earth and we here at ALIENS-R-REAL have collected all of the eye-witness reports we could to prove it!</b></p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form>
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item">
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="M/DD/YYYY">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="city-input">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="(e.g. Aspen)">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="state-input">Enter a State Abbreviation</label>
+                        <input class="form-control" id="state" type="text" placeholder="(e.g. CO)">
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="country-input">Enter a Country Abbreviation</label>
+                        <input class="form-control" id="country" type="text" placeholder="(e.g. US)">
+                      </li>
+                      <li class="filter list-group-item"> 
+                        <label for="shape-input">Enter a Shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="(e.g. sphere)">
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="button" class="btn btn-default btn-sm btn-block">Filter Table</button>
+                  <button id="reset-btn" type="button" class="btn btn-default btn-sm btn-block" onclick ="handleResetButtonClick()">Reset Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <p style= "color:whitesmoke;">Below is our data table that we have compiled for UFO Sightings reported in the US from January 1, 2010 - January 13, 2010.</p>
+            <p style= "color:whitesmoke;">To start your searching journey, complete the desired <i>Filter</i> fields on the left hand side and press the <i>Filter Table</i> button.</p>
+            <p style="color: whitesmoke;">Your filtered search result should appear and one step closer to the truth!</p>
+            <table id="ufo-table" class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th class="table-head">State</th>
+                  <th class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">Aliens-R-Real</span>
+      <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="UFO and Cow">UFO and Cow</a> from <a href="https://www.flaticon.com/"     title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"     title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+    </footer>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
